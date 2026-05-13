@@ -1,0 +1,18 @@
+# Frontend
+index/node_modules/
+index/dist/
+index/.env
+index/dist-ssr/
+*.local
+
+# Backend
+partidos-bak/api/vendor/
+partidos-bak/api/uploads/*
+!partidos-bak/api/uploads/.gitkeep
+partidos-bak/api/.env
+
+# Editor / SO
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
