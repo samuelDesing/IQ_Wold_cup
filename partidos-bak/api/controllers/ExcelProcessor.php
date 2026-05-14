@@ -9,15 +9,20 @@ class ExcelProcessor {
         try {
             $spreadsheet = IOFactory::load($filePath);
             
+            // Buscar la hoja de estadísticas (con o sin tilde)
             $statsSheet = $spreadsheet->getSheetByName('Estadisticas Jugadores');
+            if (!$statsSheet) $statsSheet = $spreadsheet->getSheetByName('Estadísticas Jugadores');
+            if (!$statsSheet) $statsSheet = $spreadsheet->getSheetByName('Estadísticas jugadores');
+
+            // Buscar la hoja de predicciones
             $predictionsSheet = $spreadsheet->getSheetByName('Predicciones IQ');
 
-            if (!$statsSheet || !$predictionsSheet) {
-                throw new Exception("Faltan las hojas 'Estadisticas Jugadores' o 'Predicciones IQ'.");
+            if (!$statsSheet && !$predictionsSheet) {
+                throw new Exception("El archivo no contiene ninguna hoja válida ('Estadísticas Jugadores' o 'Predicciones IQ').");
             }
 
-            $statsData = $this->parseStats($statsSheet);
-            $predictionsData = $this->parsePredictions($predictionsSheet);
+            $statsData = $statsSheet ? $this->parseStats($statsSheet) : [];
+            $predictionsData = $predictionsSheet ? $this->parsePredictions($predictionsSheet) : [];
 
             return [
                 'stats' => $statsData,

@@ -25,7 +25,8 @@ const AdminPanel = () => {
             const data = await uploadExcel(file);
             setMessage(`Éxito: ${data.message}`);
         } catch (error) {
-            setMessage(`Error: ${error.response?.data?.message || error.message}`);
+            const serverMsg = error.response?.data?.message || error.response?.data?.error;
+            setMessage(`Error: ${serverMsg || error.message}`);
         } finally {
             setLoading(false);
         }
