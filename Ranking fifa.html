@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>World Cup Pro - Ranking FIFA</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#091426",
+                        "secondary": "#0058be",
+                        "secondary-container": "#2170e4",
+                        "tertiary-container": "#3c2300",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#8590a6",
+                        "on-surface": "#1b1b1d",
+                        "on-surface-variant": "#45474c",
+                        "outline-variant": "#c5c6cd",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f5f3f4",
+                        "surface-container": "#f0edef",
+                        "surface-container-high": "#eae7e9",
+                    },
+                    "spacing": {
+                        "stack_md": "16px",
+                        "stack_sm": "8px",
+                        "grid_gap": "24px",
+                        "stack_lg": "24px",
+                        "container_padding": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        
+        /* Animación sutil para el podio */
+        .podium-card:hover { transform: translateY(-4px); transition: transform 0.3s ease; }
+    </style>
+</head>
+
+<body class="text-on-surface flex flex-col min-h-screen">
+
+    <header class="bg-primary sticky top-0 z-50 shadow-md">
+        <div class="max-w-[1440px] mx-auto flex items-center justify-between px-container_padding py-4">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="text-[#F59E0B] font-black text-2xl tracking-tighter">IQ</div>
+                    <h1 class="text-headline-md font-bold text-on-primary">World Cup</h1>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="flex items-center text-on-primary-container opacity-70 hover:opacity-100 transition-opacity" href="#"><span class="text-label-md">Calendario</span></a>
+                    <a class="flex items-center text-on-primary font-bold border-b-2 border-secondary pb-1 transition-all" href="#">
+                        <span class="text-label-md">Ranking FIFA</span>
+                    </a>
+                    <a class="flex items-center text-on-primary-container opacity-70 hover:opacity-100 transition-opacity" href="#"><span class="text-label-md">Métricas Calculadas</span></a>
+                    <a class="flex items-center text-on-primary-container opacity-70 hover:opacity-100 transition-opacity" href="#"><span class="text-label-md">Predicciones</span></a>
+                </nav>
+            </div>
+            
+            <div class="flex items-center gap-6">
+                <button class="bg-secondary text-on-primary px-4 py-2 rounded-lg font-label-sm hover:brightness-110 transition-all">Centro de Partidos en Vivo</button>
+                <div class="flex items-center gap-4 text-on-primary-container opacity-70">
+                    <span class="material-symbols-outlined cursor-pointer hover:text-on-primary" title="Buscar">search</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[1440px] w-full mx-auto p-container_padding flex flex-col lg:flex-row gap-grid_gap flex-1 mt-6">
+        
+        <div class="flex-1 space-y-10">
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-outline-variant/30 pb-4">
+                <div>
+                    <h2 class="text-3xl font-black text-primary mb-1">Ranking Mundial FIFA</h2>
+                    <p class="text-label-md text-on-surface-variant font-normal">Clasificación oficial y valor de mercado de las mejores selecciones (Top 20).</p>
+                </div>
+                <div class="mt-4 md:mt-

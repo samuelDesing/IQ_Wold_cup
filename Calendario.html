@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>World Cup Pro - Calendario</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#091426",
+                        "secondary": "#0058be",
+                        "secondary-container": "#2170e4",
+                        "tertiary-container": "#3c2300",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#8590a6",
+                        "on-surface": "#1b1b1d",
+                        "on-surface-variant": "#45474c",
+                        "outline-variant": "#c5c6cd",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f5f3f4",
+                        "surface-container": "#f0edef",
+                        "surface-container-high": "#eae7e9",
+                    },
+                    "spacing": {
+                        "stack_md": "16px",
+                        "stack_sm": "8px",
+                        "grid_gap": "24px",
+                        "stack_lg": "24px",
+                        "container_padding": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; } /* Fondo un poco más claro como en el diseño */
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+
+<body class="text-on-surface flex flex-col min-h-screen">
+
+    <header class="bg-primary sticky top-0 z-50 shadow-md">
+        <div class="max-w-[1440px] mx-auto flex items-center justify-between px-container_padding py-4">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="text-[#F59E0B] font-black text-2xl tracking-tighter">IQ</div>
+                    <h1 class="text-headline-md font-bold text-on-primary">World Cup</h1>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="flex items-center text-on-primary font-bold border-b-2 border-secondary pb-1 transition-all" href="#">
+                        <span class="text-label-md">Calendario</span>
+                    </a>
+                    <a class="flex items-center text-on-primary-container opacity-70 hover:opacity-100 transition-opacity" href="#"><span class="text-label-md">Ranking FIFA</span></a>
+                    <a class="flex items-center text-on-primary-container opacity-70 hover:opacity-100 transition-opacity" href="#"><span class="text-label-md">Métricas Calculadas</span></a>
+                    <a class="flex items-center text-on-primary-container opacity-70 hover:opacity-100 transition-opacity" href="#"><span class="text-label-md">Predicciones</span></a>
+                </nav>
+            </div>
+            
+            <div class="flex items-center gap-6">
+                <button class="bg-secondary text-on-primary px-4 py-2 rounded-lg font-label-sm hover:brightness-110 transition-all">Centro de Partidos en Vivo</button>
+                <div class="flex items-center gap-4 text-on-primary-container opacity-70">
+                    <span class="material-symbols-outlined cursor-pointer hover:text-on-primary" title="Buscar">search</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[1440px] w-full mx-auto p-container_padding flex-1 space-y-8 mt-6">
+        
+        <div class="bg-primary rounded-2xl p-8 md:p-12 shadow-lg flex flex-col md:flex-row justify-between items-start md:items-center text-on-primary relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary to-transparent z-0"></div>
+            
+            <div class="relative z-10">
+                <span class="bg-[#F59E0B] text-primary text-[11px] font-bold px-3 py-1 rounded-full mb-4 inline-block uppercase tracking-wider">Match of the Day</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-2 tracking-tight" id="hero-title">Mexico vs South Africa</h2>
+                <p class="text-on-primary-container mb-6 opacity-80" id="hero-subtitle">Opening Match • Estadio Azteca, Mexico City</p>
+                
+                <div class="flex items-center gap-4 text-2xl font-bold">
+                    <div class="w-8 h-8 rounded-full overflow-hidden border border-on-primary/20"><img src="https://flagcdn.com/mx.svg" class="w-full h-full object-cover"></div>
+                    <span id="hero-team1">MEX</span>
+                    <span class="text-outline-variant italic font-normal text-lg">VS</span>
+                    <span id="hero-team2">RSA</span>
+                    <div class="w-8 h-8 rounded-full overflow-hidden border border-on-primary/20"><img src="https://flagcdn.com/za.svg" class="w-full h-full object-cover"></div>
+                </div>
+            </div>
+
+            <div class="relative z-10 mt-8 md:mt-0 md:text-right">
+                <div class="text-[64px] md:text-[80px] font-black text-[#F59E0B] leading-none mb-1" id="hero-time">15:00</div>
+                <div class="text-xl font-bold tracking-widest uppercase opacity-90" id="hero-date">June 11, 2026</div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 border-b border-outline-variant/30 pb-6">
+            <div>
+                <h2 class="text-3xl font-bold text-primary mb-1">Calendario de Partidos - Mundial 2026</h2>
+                <p class="text-label-md text-on-surface-variant font-normal">Sigue el camino a la gloria en la cita más grande del fútbol mundial.</p>
+            </div>
+            <div class="relative w-full md:w-80">
+                <span class="material-symbols-outlined absolute left-3 top-1/2 transform -translate-y-1/2 text-outline-variant">search</span>
+                <input type="text" placeholder="Buscar por país o estadio..." class="w-full pl-10 pr-4 py-2 border border-outline-variant rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-secondary/50">
+            </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+            <button class="bg-secondary text-on-primary px-5 py-2 rounded-full text-sm font-bold shadow-sm">Fase de Grupos</button>
+            <button class="bg-white border border-outline-variant text-on-surface-variant px-5 py-2 rounded-full text-sm font-medium hover:bg-surface-container-low transition-colors">Dieciseisavos</button>
+            <button class="bg-white border border-outline-variant text-on-surface-variant px-5 py-2 rounded-full text-sm font-medium hover:bg-surface-container-low transition-colors">Octavos</button>
+            <button class="bg-white border border-outline-variant text-on-surface-variant px-5 py-2 rounded-full text-sm font-medium hover:bg-surface-container-low transition-colors">Cuartos de final</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-calendario">
+            
+            <div class="bg-white rounded-xl border border-outline-variant shadow-sm p-6 hover:shadow-md transition-shadow">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="bg-red-50 text-red-600 text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1"><span class="w-1.5 h-1.5 bg-red-600 rounded-full animate-pulse"></span> LIVE 72'</span>
+                    <span class="text-[11px] font-bold text-on-surface-variant/70">11 JUN - 18:00</span>
+                </div>
+                <div class="space-y-4 mb-6">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-7 h-5 rounded overflow-hidden shadow-sm"><img src="https://flagcdn.com/mx.svg" class="w-full h-full object-cover"></div>
+                            <span class="font-bold text-primary text-base">México</span>
+                        </div>
+                        <span class="text-secondary font-black text-xl">2</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-7 h-5 rounded overflow-hidden shadow-sm"><img src="https://flagcdn.com/ca.svg" class="w-full h-full object-cover"></div>
+                            <span class="font-bold text-primary text-base">Canadá</span>
+                        </div>
+                        <span class="text-secondary font-black text-xl">1</span>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-outline-variant/40 space-y-2 text-[11px] font-medium text-on-surface-variant">
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">location_on</span> Estadio Azteca, CDMX</div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">flag</span> Grupo A</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-outline-variant shadow-sm p-6 hover:shadow-md transition-shadow">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="bg-blue-50 text-secondary text-[10px] font-bold px-2 py-0.5 rounded">PRÓXIMO</span>
+                    <span class="text-[11px] font-bold text-on-surface-variant/70">12 JUN - 15:00</span>
+                </div>
+                <div class="space-y-4 mb-6">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-7 h-5 rounded overflow-hidden shadow-sm"><img src="https://flagcdn.com/ar.svg" class="w-full h-full object-cover"></div>
+                            <span class="font-bold text-primary text-base">Argentina</span>
+                        </div>
+                        <span class="text-outline-variant font-black text-xl">-</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-7 h-5 rounded overflow-hidden shadow-sm"><img src="https://flagcdn.com/jp.svg" class="w-full h-full object-cover"></div>
+                            <span class="font-bold text-primary text-base">Japón</span>
+                        </div>
+                        <span class="text-outline-variant font-black text-xl">-</span>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-outline-variant/40 space-y-2 text-[11px] font-medium text-on-surface-variant">
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">location_on</span> SoFi Stadium, Los Angeles</div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">flag</span> Grupo B</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-outline-variant shadow-sm p-6 hover:shadow-md transition-shadow">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="bg-blue-50 text-secondary text-[10px] font-bold px-2 py-0.5 rounded">PRÓXIMO</span>
+                    <span class="text-[11px] font-bold text-on-surface-variant/70">12 JUN - 21:00</span>
+                </div>
+                <div class="space-y-4 mb-6">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-7 h-5 rounded overflow-hidden shadow-sm"><img src="https://flagcdn.com/es.svg" class="w-full h-full object-cover"></div>
+                            <span class="font-bold text-primary text-base">España</span>
+                        </div>
+                        <span class="text-outline-variant font-black text-xl">-</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-7 h-5 rounded overflow-hidden shadow-sm"><img src="https://flagcdn.com/ma.svg" class="w-full h-full object-cover"></div>
+                            <span class="font-bold text-primary text-base">Marruecos</span>
+                        </div>
+                        <span class="text-outline-variant font-black text-xl">-</span>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-outline-variant/40 space-y-2 text-[11px] font-medium text-on-surface-variant">
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">location_on</span> MetLife Stadium, New York</div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">flag</span> Grupo C</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-outline-variant shadow-sm p-6 hover:shadow-md transition-shadow">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="bg-blue-50 text-secondary text-[10px] font-bold px-2 py-0.5 rounded">PRÓXIMO</span>
+                    <span class="text-[11px] font-bold text-on-surface-variant/70">13 JUN - 14:00</span>
+                </div>
+                <div class="space-y-4 mb-6">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-7 h-5 rounded overflow-hidden shadow-sm"><img src="https://flagcdn.com/br.svg" class="w-full h-full object-cover"></div>
+                            <span class="font-bold text-primary text-base">Brasil</span>
+                        </div>
+                        <span class="text-outline-variant font-black text-xl">-</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-7 h-5 rounded overflow-hidden shadow-sm"><img src="https://flagcdn.com/gb-eng.svg" class="w-full h-full object-cover"></div>
+                            <span class="font-bold text-primary text-base">Inglaterra</span>
+                        </div>
+                        <span class="text-outline-variant font-black text-xl">-</span>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-outline-variant/40 space-y-2 text-[11px] font-medium text-on-surface-variant">
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">location_on</span> Hard Rock Stadium, Miami</div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">flag</span> Grupo D</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-outline-variant shadow-sm p-6 hover:shadow-md transition-shadow">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="bg-blue-50 text-secondary text-[10px] font-bold px-2 py-0.5 rounded">PRÓXIMO</span>
+                    <span class="text-[11px] font-bold text-on-surface-variant/70">13 JUN - 19:00</span>
+                </div>
+                <div class="space-y-4 mb-6">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-7 h-5 rounded overflow-hidden shadow-sm"><img src="https://flagcdn.com/fr.svg" class="w-full h-full object-cover"></div>
+                            <span class="font-bold text-primary text-base">Francia</span>
+                        </div>
+                        <span class="text-outline-variant font-black text-xl">-</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-7 h-5 rounded overflow-hidden shadow-sm"><img src="https://flagcdn.com/us.svg" class="w-full h-full object-cover"></div>
+                            <span class="font-bold text-primary text-base">EE. UU.</span>
+                        </div>
+                        <span class="text-outline-variant font-black text-xl">-</span>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-outline-variant/40 space-y-2 text-[11px] font-medium text-on-surface-variant">
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">location_on</span> Mercedes-Benz Stadium, Atlanta</div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">flag</span> Grupo E</div>
+                </div>
+            </div>
+
+            <div class="bg-primary rounded-xl shadow-md p-6 text-on-primary border border-primary-container relative overflow-hidden hover:scale-[1.02] transition-transform cursor-pointer">
+                <div class="flex justify-between items-center mb-6 relative z-10">
+                    <span class="bg-[#F59E0B] text-primary text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[12px]">star</span> DESTACADO
+                    </span>
+                    <span class="text-[11px] font-bold opacity-80">14 JUN - 20:00</span>
+                </div>
+                <div class="space-y-4 mb-6 relative z-10">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-7 h-5 rounded overflow-hidden border border-on-primary/20"><img src="https://flagcdn.com/pt.svg" class="w-full h-full object-cover"></div>
+                            <span class="font-bold text-white text-base">Portugal</span>
+                        </div>
+                        <span class="text-on-primary-container italic font-black text-xl">VS</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-7 h-5 rounded overflow-hidden border border-on-primary/20"><img src="https://flagcdn.com/de.svg" class="w-full h-full object-cover"></div>
+                            <span class="font-bold text-white text-base">Alemania</span>
+                        </div>
+                        <span class="text-on-primary-container italic font-black text-xl">VS</span>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-on-primary/20 space-y-2 text-[11px] font-medium opacity-90 relative z-10">
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">location_on</span> AT&T Stadium, Dallas</div>
+                    <div class="flex items-center gap-2 text-[#F59E0B]"><span class="material-symbols-outlined text-[14px]">sports_soccer</span> Partido de la Jornada</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/30 mt-8 gap-4">
+            <span class="text-sm font-medium text-on-surface-variant">Mostrando 6 de 104 partidos</span>
+            <div class="flex items-center gap-1">
+                <button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+                </button>
+                <button class="w-8 h-8 flex items-center justify-center rounded bg-secondary text-white font-bold shadow-sm">1</button>
+                <button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-colors font-medium">2</button>
+                <button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-colors font-medium">3</button>
+                <button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="border-t border-outline-variant bg-white mt-auto py-6">
+        <div class="max-w-[1440px] mx-auto px-container_padding flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-[12px] font-medium text-on-surface-variant opacity-70">
+                © 2026 Iquartil
+            </div>
+            <div class="flex items-center gap-6">
+                <a class="text-[12px] font-medium text-on-surface-variant opacity-70 hover:opacity-100 transition-opacity" href="#">Términos y Condiciones</a>
+                <a class="text-[12px] font-medium text-on-surface-variant opacity-70 hover:opacity-100 transition-opacity" href="#">Privacidad</a>
+                <span class="text-[12px] font-medium text-on-surface-variant opacity-50">Admin. IQ</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
