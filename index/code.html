@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>World Cup Pro - Calendario Atmosfrico</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#d8e2ff",
+                      "on-secondary-container": "#fefcff",
+                      "primary-fixed-dim": "#bcc7de",
+                      "on-secondary-fixed": "#001a42",
+                      "inverse-on-surface": "#f3f0f2",
+                      "surface-container-low": "#f5f3f4",
+                      "on-primary-fixed": "#111c2d",
+                      "on-background": "#1b1b1d",
+                      "tertiary-fixed": "#ffddb8",
+                      "secondary": "#0058be",
+                      "on-surface-variant": "#45474c",
+                      "on-surface": "#1b1b1d",
+                      "on-tertiary-fixed": "#2a1700",
+                      "primary": "#091426",
+                      "secondary-fixed-dim": "#adc6ff",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#2170e4",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-container": "#3c2300",
+                      "surface-container-highest": "#e4e2e3",
+                      "primary-container": "#1e293b",
+                      "surface-container-high": "#eae7e9",
+                      "inverse-primary": "#bcc7de",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#545f73",
+                      "on-secondary-fixed-variant": "#004395",
+                      "surface-dim": "#dcd9db",
+                      "primary-fixed": "#d8e3fb",
+                      "on-tertiary-container": "#c88000",
+                      "background": "#fbf8fa",
+                      "outline-variant": "#c5c6cd",
+                      "surface-bright": "#fbf8fa",
+                      "on-tertiary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-primary-container": "#8590a6",
+                      "on-error": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#653e00",
+                      "inverse-surface": "#303032",
+                      "on-primary-fixed-variant": "#3c475a",
+                      "outline": "#75777d",
+                      "tertiary-fixed-dim": "#ffb95f",
+                      "surface-container": "#f0edef",
+                      "tertiary": "#201100",
+                      "surface-variant": "#e4e2e3",
+                      "surface": "#fbf8fa"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sidebar_width": "20%",
+                      "stack_md": "16px",
+                      "stack_sm": "8px",
+                      "main_content_width": "55%",
+                      "grid_gap": "24px",
+                      "stack_lg": "24px",
+                      "widget_panel_width": "25%",
+                      "container_padding": "32px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "label-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #F4F6F9; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+<style data-stitch-cursor="">*{cursor:crosshair!important}[contenteditable="true"]:focus,.cursor-text:focus{cursor:text!important}</style><style data-stitch-scroll-lock="">html,body{overflow:hidden!important}</style><style data-stitch-cursor="">*{cursor:crosshair!important}[contenteditable="true"]:focus,.cursor-text:focus{cursor:text!important}</style><style data-stitch-scroll-lock="">html,body{overflow:hidden!important}</style><style data-stitch-cursor="">*{cursor:crosshair!important}[contenteditable="true"]:focus,.cursor-text:focus{cursor:text!important}</style><style data-stitch-scroll-lock="">html,body{overflow:hidden!important}</style><style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style><style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style><style data-stitch-cursor="">*{cursor:crosshair!important}[contenteditable="true"]:focus,.cursor-text:focus{cursor:text!important}</style><style data-stitch-scroll-lock="">html,body{overflow:hidden!important}</style></head>
+<body class="text-on-surface">
+<!-- Top Horizontal Navigation Bar -->
+<header class="bg-primary sticky top-0 z-50 shadow-md">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between px-container_padding py-4">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4"><img alt="Iquartil Logo" class="w-auto object-contain h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9FUETnagVjlpaLuV5_XRPZIey4ZUmRIyFpBGFXmki6fP7fIM-rTghoW_l_R19x9g5kmJ3s4QQxaHAopblPCJrMsTZtd9p_iyPwg29tJXo0EeFhRkIe3HRjU6YGpVfYt7GdLSAwvr7NoHTX9aSmY7yzwOd6epjwBhwEF7NJ8OxQIGshzknmWyocI0odvpvqxB3X5vTYBC85VtFaVmSCSE-M7GB_RUQVrhw8yuevaada1g4tXxPGxMLMtASPiXKgwKBjMNOEA7fKJeH">
+<h1 class="text-headline-md font-bold text-on-primary">World Cup</h1>
+<p class="text-[10px] font-label-sm text-on-primary-container opacity-70"><br></p>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="flex items-center text-on-primary font-bold border-b-2 border-tertiary-container pb-1 transition-all" href="#">
+<span class="text-label-md"><br></span>
+</a>
+<a class="flex items-center text-on-primary-container opacity-70 hover:opacity-100 transition-opacity" href="#">
+<span class="text-label-md">Calendario</span>
+</a>
+<a class="flex items-center text-on-primary-container opacity-70 hover:opacity-100 transition-opacity" href="#">
+<span class="text-label-md">Estadisticas</span>
+</a>
+<a class="flex items-center text-on-primary-container opacity-70 hover:opacity-100 transition-opacity" href="#">
+<span class="text-label-md">Métricas Calculadas</span>
+</a><a class="flex items-center text-on-primary-container opacity-70 hover:opacity-100 transition-opacity" href="#"><span class="text-label-md">Predicciones</span></a>
+<a class="flex items-center text-on-primary-container opacity-70 hover:opacity-100 transition-opacity" href="#">
+<span class="text-label-md"><br></span>
+</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<button class="bg-secondary text-on-primary px-4 py-2 rounded-lg font-label-sm hover:brightness-110 transition-all">Centro de Partidos en Vivo</button>
+<div class="flex items-center gap-4 text-on-primary-container opacity-70">
+<span class="material-symbols-outlined cursor-pointer hover:text-on-primary" data-icon="search">search</span>
+<span class="text-on-primary font-bold text-label-md"><br></span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Layout (2-column: Wide Content + Sidebar) -->
+<main class="max-w-[1440px] mx-auto p-container_padding flex gap-grid_gap">
+<!-- Left Side: Large Content Area (75%) -->
+<div class="flex-1 space-y-grid_gap">
+<!-- Header section in main content -->
+<div class="flex justify-between items-center">
+<h2 class="text-headline-lg font-headline-lg text-primary">Predicción Copa Mundial de la FIFA</h2>
+</div>
+<!-- Large Featured Match Hero -->
+<div class="relative rounded-xl overflow-hidden h-[400px] shadow-lg">
+<img alt="Photorealistic and cinematic shot of the FIFA World Cup trophy centered in a futuristic, high-tech stadium at night." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7dfmN_tCjjBNabFyjpt3UlaSr9Lz7XxYHndbuPRm_2fCZ-LcKCBNL6c3viyxtixpHB52dozNRR2gSDNxUUsUB4KbNL1SOVukjr3ouSdbbwAdLodpiOPnr2-H1lFcDJXSyjjgZrY-Z3UThbj_i9M4tZq6sptvSn57SkxUZoaI_3p67tAu1CA4kzwy4qZZfPW3HiuizIKyWuXJhZ5YpYbsv4KMJ-T002U737a_I0YoT5FgeTxz5lyfhQIomLABc_OnzSrByfTuSXK5y">
+</div>
+<!-- 2-Column Grid for Upcoming Matches and Tournament Progress -->
+<div class="space-y-grid_gap">
+<!-- Próximos Partidos - Full Width -->
+<section class="space-y-stack_md">
+<div class="flex justify-between items-center">
+<h4 class="text-headline-md font-headline-md text-primary">Próximos Partidos</h4>
+<button class="text-secondary font-label-md flex items-center hover:underline">Ver Todo <span class="material-symbols-outlined ml-1 text-sm" data-icon="arrow_forward">arrow_forward</span></button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+<!-- Match Card 1 -->
+<div class="bg-white p-stack_md rounded-lg border border-outline-variant shadow-[0px_4px_12px_rgba(30,41,59,0.05)] flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="text-center">
+<img alt="Argentina Flag" class="w-10 h-10 rounded-lg shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTY7cIe8zTa1Tp45n_GhXRi3DQclgO_VNHQQPqOgYgehXaI47rCu87UQhl5F1AXJR-1UCGQU4_V4r0HFS8j68Mrt3VrYG54U7LscGCOkFmS4nk5cMQ1WA99G1Wkv139efE-CCtsLcvQRzHycD5ZnaCzC4yf2qVM711HsBLquo9_4mhy1s4uuDp00HOwbLoXltQ4sW_hYdwR2pPNunOPFRi1_MmC5WW7VD-mFNIu3toOEphWLG9HRKaZepzLzR_9ufbDXGzVOi4-Pj8">
+<span class="text-label-sm font-bold text-primary">ARG</span>
+</div>
+<div class="text-label-sm font-bold text-outline-variant">VS</div>
+<div class="text-center">
+<img alt="France Flag" class="w-10 h-10 rounded-lg shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo60adh9svP0AR-OfPoeUI4OL7ne694dDm4Uf73nh60a_rJSY7VD6zNtBO2HKHxhpep9pJibEgeP0k57O5mzwTM1c4k_SJxttH2Xkrmeq-TpWc00gZwrSf4LDc5MfdPyWTRJwE1FINT4V0bfXRLS6p24qkXHjxno27XZ992Jb_n73dngDCdDpQTL1X3gNFlnE_z7udMBgqQMeQL1eVqYlWFXcva-BXZG3s1d_okPYop_f5io6lxuGP6Y3eyFI9VoE2ZNe879V7i8zL">
+<span class="text-label-sm font-bold text-primary">FRA</span>
+</div>
+</div>
+<div class="text-right">
+<p class="text-label-sm text-on-surface-variant opacity-70 mb-2">Hoy, 20:00</p>
+<button class="bg-[#3B82F6] text-white px-4 py-1.5 rounded-lg text-label-sm font-label-md hover:brightness-110 transition-all">Ver Todo <span class="material-symbols-outlined ml-1 text-sm" data-icon="arrow_forward">arrow_forward</span></button>
+</div>
+</div>
+<!-- Match Card 2 -->
+<div class="bg-white p-stack_md rounded-lg border border-outline-variant shadow-[0px_4px_12px_rgba(30,41,59,0.05)] flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="text-center">
+<img alt="Germany Flag" class="w-10 h-10 rounded-lg shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs3KUxfMRf3DBPwxFco2pzJ0m2kvJna94UI6_q1OsNpNyuPiBr80KejDkIhyAYOXPCjkYa52UUNhWcbjCDWB_-rY3AHK2kLVa95ADB8QegBjS-1rA23zfso5uUod_kr2CMR2rW3rhTOq8aEimuk8-inTvwsu5sfAQyairsjHtwvd9bxf3mPbPhBxYZfvNFT1pAjDzYnktG0X07LfwCMKZm7TBI_1xxrDmsKWuDvkhTg9BPP6TvlgbpH59YBtklw2EFc5Pl58uj9kqx">
+<span class="text-label-sm font-bold text-primary">GER</span>
+</div>
+<div class="text-label-sm font-bold text-outline-variant">VS</div>
+<div class="text-center">
+<img alt="Japan Flag" class="w-10 h-10 rounded-lg shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbRu9U79QU8O_wtQ-UCh1fBXGxyFg8owoCwWHjSLR4NY2jD0-GwS_IR1G8uuZxu5YvT65hqb9E_p_ULGQgM1-uk_uOKbtpoLPVVfGFqXSW5k_wacemH5kkJp8rd0JG4qewwgmwb-K-D-yE2Ey83f5P6tAWizuooTIGFe3N4LJMvOFwVavEkBIY1zJJv9PMTRYdOvI56xmZ4gQrZywbq9IXEzQfX2QUA280YS4jAJMifIFIW16KK1zDqDV5EOTeow_EGUUdQViDnvEx">
+<span class="text-label-sm font-bold text-primary">JPN</span>
+</div>
+</div>
+<div class="text-right">
+<p class="text-label-sm text-on-surface-variant opacity-70 mb-2">Mañana, 14:00</p>
+<button class="bg-[#3B82F6] text-white px-4 py-1.5 rounded-lg text-label-sm font-label-md hover:brightness-110 transition-all">Ver Todo <span class="material-symbols-outlined ml-1 text-sm" data-icon="arrow_forward">arrow_forward</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Tournament Progress - Full Width Below -->
+<section class="space-y-stack_md">
+<h4 class="text-headline-md font-headline-md text-primary">Progreso del Torneo</h4>
+<div class="bg-white p-stack_lg rounded-xl border border-outline-variant shadow-sm h-fit">
+<div class="relative h-4 w-full bg-surface-container rounded-full overflow-hidden mb-4">
+<div class="absolute h-full bg-secondary rounded-full" style="width: 65%;"></div>
+</div>
+<div class="grid grid-cols-5 gap-1 text-[10px] font-label-sm text-on-surface-variant text-center"><span class="font-bold text-primary">Fase de Grupos</span><span class="">Octavos de Final</span><span class="">Cuartos de Final</span><span class="">Semifinales</span><span class="">Final</span></div>
+<div class="mt-8 p-4 bg-surface-container-low rounded-lg">
+<h5 class="text-label-md font-bold text-primary mb-2">Estado de la Fase Actual</h5>
+<p class="text-label-sm text-on-surface-variant">Los partidos de la fase de grupos están completados al 85%. Los dos mejores equipos de cada grupo avanzarán a los octavos de final que comienzan la próxima semana.</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Right Side: Sidebar (25%) -->
+<aside class="w-[320px] shrink-0 flex flex-col gap-grid_gap">
+<!-- Classification Widget -->
+<div class="bg-white p-6 rounded-xl border border-outline-variant shadow-sm">
+<h4 class="text-label-md font-label-md text-on-surface-variant uppercase tracking-wider mb-4">TABLA DE POSICIONES</h4>
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden">
+<table class="w-full text-left">
+<thead class="bg-surface-container-high">
+<tr>
+<th class="px-3 py-2 text-[11px] font-label-sm text-on-surface-variant">Pos</th>
+<th class="px-3 py-2 text-[11px] font-label-sm text-on-surface-variant">Equipo</th>
+<th class="px-3 py-2 text-[11px] font-label-sm text-on-surface-variant text-center">PTS</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="bg-[#F59E0B] text-primary">
+<td class="px-3 py-2 text-label-sm font-bold">1</td>
+<td class="px-3 py-2 flex items-center gap-2">
+<img alt="Brazil Flag" class="w-5 h-5 rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR-b9199yXRcFeUJ-DizmQwCgzOfcoDKOdUwa0dyEoLCvpYjRRJW866HNXckINS04OUJhvCIFWYiYAbdnxDsYNuBi-mIll7t8MD4soyIxoBqsOg7vy2rOJHsKuNOMnKx7yUbYTiH6IW5g4XA4kmqTEsM_0wYW6sx5bc-kdsv8J7Ot7uu2KaNVs17K47LMi8sbqf_2rr8xjT99hPFkgxPMIkWdg4fzNYDObE62nl0C6fPRsvwcj3HM06o-UXiEhcQ8XmiS6Z2x4ovHy">
+<span class="text-label-sm font-bold">Brasil</span>
+</td>
+<td class="px-3 py-2 text-label-sm font-bold text-center">9</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-3 py-2 text-label-sm text-on-surface-variant">2</td>
+<td class="px-3 py-2 flex items-center gap-2">
+<img alt="Spain Flag" class="w-5 h-5 rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYiGCZLWvR_2LEDs3YA3_tOKM0C2f1zkVNeJH2MLPOF6M7eQX4UD-Q26aAu_AhWrHOzNTDOWWoqd_5FnvQw6C70KRKxa7wwHT38OPpOTppQZqUW1naC_e_jOdSIXaLQOzAXXaEKYJeblR-D3_nL74oZh8YK3cW0yYEnL1I8e30roudzNMlfaz810pzSKXxLav-NqtQhLhIgVzepf8sARwnytNuf1qf1XHogvveGyg4ytZOT8B31027HRiFydb2WHLcS73nGzoneLVr">
+<span class="text-label-sm text-primary">España</span>
+</td>
+<td class="px-3 py-2 text-label-sm text-primary text-center">6</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-3 py-2 text-label-sm text-on-surface-variant">3</td>
+<td class="px-3 py-2 flex items-center gap-2">
+<img alt="Switzerland Flag" class="w-5 h-5 rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyY4sxkimJ9MEB8gWEvH1cG10utCko9clycWzQrbTR4RBn3XtNRBDZOzwadPFdynVW7pHF-R4Jpmcuceys1cfpmXW1_W6yKD43Z_HHltRH272ug7udNk1DTVFznV6AYl_RDinvDCpixPXaBdR3rqWckNLzm-EJOtxaFLccb_UDb_B68i2X0rqt7unKF-Deu8H_fxIUtieT5GAKRiF9O30VniQsT8h5ltwBtUWZ60CJzeeGK4E95XvZc2QXjeF8L8ijzstYad2ECq0r">
+<span class="text-label-sm text-primary">Suiza</span>
+</td>
+<td class="px-3 py-2 text-label-sm text-primary text-center">3</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-3 py-2 text-label-sm text-on-surface-variant">4</td>
+<td class="px-3 py-2 flex items-center gap-2">
+<img alt="Cameroon Flag" class="w-5 h-5 rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_ejNMQ8aIdWxi5t0H6uZwaa3-iwhBTFAv_jN6gsNy3EaDj10WK9xaU649YR_Zjssyvue-FbWPeblq2CNmH8ctvPmmQadB1Qz3MK1RYZhghyYn0koojnRiG6dYAb9hMGPGWbBnc7rMwmgtU_CFNGlnH0JNhmr-ccerIFum_u1W8_XIkGYSxbBMXqMofKWj-xzagrAdaAZU60kDaZjWyBZQgGH1Q0BHaJeaUUqFy6BRuSimYL9UZWjcvRHQzX331lXV2YJMp9hD9qND">
+<span class="text-label-sm text-primary">Camerún</span>
+</td>
+<td class="px-3 py-2 text-label-sm text-primary text-center">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Top Scorers Widget -->
+<div class="bg-white p-6 rounded-xl border border-outline-variant shadow-sm"><h4 class="text-label-md font-label-md text-on-surface-variant uppercase tracking-wider mb-4">COMPARAR EQUIPOS</h4><div class="flex items-center justify-between mb-6"><div class="text-center flex-1"><div class="w-12 h-12 mx-auto mb-2 bg-surface-container rounded-lg flex items-center justify-center"><img alt="Brazil" class="w-8 h-8 rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR-b9199yXRcFeUJ-DizmQwCgzOfcoDKOdUwa0dyEoLCvpYjRRJW866HNXckINS04OUJhvCIFWYiYAbdnxDsYNuBi-mIll7t8MD4soyIxoBqsOg7vy2rOJHsKuNOMnKx7yUbYTiH6IW5g4XA4kmqTEsM_0wYW6sx5bc-kdsv8J7Ot7uu2KaNVs17K47LMi8sbqf_2rr8xjT99hPFkgxPMIkWdg4fzNYDObE62nl0C6fPRsvwcj3HM06o-UXiEhcQ8XmiS6Z2x4ovHy"></div><p class="text-label-sm font-bold text-primary">Brasil</p></div><div class="text-label-sm font-bold text-outline-variant px-2">VS</div><div class="text-center flex-1"><div class="w-12 h-12 mx-auto mb-2 bg-surface-container rounded-lg flex items-center justify-center"><img alt="Argentina" class="w-8 h-8 rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTY7cIe8zTa1Tp45n_GhXRi3DQclgO_VNHQQPqOgYgehXaI47rCu87UQhl5F1AXJR-1UCGQU4_V4r0HFS8j68Mrt3VrYG54U7LscGCOkFmS4nk5cMQ1WA99G1Wkv139efE-CCtsLcvQRzHycD5ZnaCzC4yf2qVM711HsBLquo9_4mhy1s4uuDp00HOwbLoXltQ4sW_hYdwR2pPNunOPFRi1_MmC5WW7VD-mFNIu3toOEphWLG9HRKaZepzLzR_9ufbDXGzVOi4-Pj8"></div><p class="text-label-sm font-bold text-primary">Argentina</p></div></div><div class="space-y-4 mb-6"><div class="space-y-1"><div class="flex justify-between text-[11px] font-label-md text-on-surface-variant"><span class="">1º</span><span class="uppercase tracking-tighter">Ranking FIFA</span><span class="">3º</span></div><div class="h-1.5 w-full bg-surface-container rounded-full flex"><div class="h-full bg-secondary rounded-l-full" style="width: 60%"></div><div class="h-full bg-outline-variant opacity-30" style="width: 10%"></div><div class="h-full bg-secondary-container rounded-r-full" style="width: 30%"></div></div></div><div class="flex justify-between items-center py-1 border-b border-outline-variant/30"><span class="text-label-sm font-bold text-primary">12</span><span class="text-[10px] text-on-surface-variant uppercase">Goles Favor</span><span class="text-label-sm font-bold text-primary">10</span></div><div class="flex justify-between items-center py-1 border-b border-outline-variant/30"><span class="text-label-sm font-bold text-primary">2</span><span class="text-[10px] text-on-surface-variant uppercase">Goles Contra</span><span class="text-label-sm font-bold text-primary">3</span></div><div class="flex justify-between items-center py-1"><span class="text-label-sm font-bold text-primary">58%</span><span class="text-[10px] text-on-surface-variant uppercase">Posesión Prom.</span><span class="text-label-sm font-bold text-primary">54%</span></div></div><button class="w-full bg-secondary text-on-primary py-2.5 rounded-lg text-label-sm font-bold hover:brightness-110 transition-all">Ver Análisis Completo</button></div>
+<!-- Betting Odds Promo -->
+<div class="bg-primary p-6 rounded-xl text-on-primary"><h5 class="text-label-md font-bold mb-3">Ranking FIFA</h5><div class="space-y-2.5"><div class="flex justify-between items-center text-label-sm"><span class="">1. Argentina</span><span class="text-[#F59E0B] font-bold">1861 pts</span></div><div class="flex justify-between items-center text-label-sm"><span class="">2. Francia</span><span class="text-[#F59E0B] font-bold">1853 pts</span></div><div class="flex justify-between items-center text-label-sm"><span class="">3. Inglaterra</span><span class="text-[#F59E0B] font-bold">1807 pts</span></div></div><button class="w-full mt-6 py-2 border border-on-primary rounded-lg text-label-sm font-bold hover:bg-on-primary hover:text-primary transition-all">Ver Ranking Completo</button></div>
+<!-- Footer Links in Sidebar -->
+<div class="pt-4 border-t border-outline-variant flex justify-between px-2">
+<a class="flex items-center text-on-surface-variant opacity-70 text-[11px] hover:text-primary transition-colors" href="#"></a>
+<a class="flex items-center text-on-surface-variant opacity-70 text-[11px] hover:text-primary transition-colors" href="#"></a>
+</div>
+</aside>
+</main>
+<footer class="border-t border-outline-variant bg-surface-container-lowest mt-12 py-8">
+<div class="max-w-[1440px] mx-auto px-container_padding flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-label-sm text-on-surface-variant opacity-70">
+      © 2026 Iquartil</div>
+<div class="flex items-center gap-6">
+<a class="text-label-sm text-on-surface-variant opacity-70 hover:opacity-100 transition-opacity" href="#">Términos y Condiciones</a>
+<a class="text-label-sm text-on-surface-variant opacity-70 hover:opacity-100 transition-opacity" href="#">Privacidad</a>
+<span class="text-label-sm text-on-surface-variant opacity-50">Admin. IQ</span>
+</div>
+</div>
+</footer>
+
+</body></html>
